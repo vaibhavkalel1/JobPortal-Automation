@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/vaibhavkalel1/JobPortal-Automation.git'
             }
         }
-        stage('Build Docker Image') {
+        /*stage('Build Docker Image') {
             steps {
                 script {
                     bat "docker build -t vaibhavkalel/jobportalautomation ."
@@ -69,13 +69,13 @@ pipeline {
                 }
             }
         }
-        /*stage('Minikube status') {
+        stage('Minikube status') {
             steps {
                 script {
                     bat "minikube status"
                 }
             }
-        }*/
+        }
         stage('Deploy to Kubernetes') {
             steps {
                 script {
@@ -98,7 +98,7 @@ pipeline {
                     bat "kubectl expose deployment jobportal-app-deployment1 --type=NodePort --port=8000"
                 }
             }
-        }
+        }*/
         stage('Get URL') {
             steps {
                 script {
@@ -106,12 +106,12 @@ pipeline {
                 }
             }
         }
-        /*stage('Get URL and play with Application') {
+        stage('Get URL and play with Application') {
             steps {
                 script {
                     bat "minikube service social-app-service1"
                 }
             }
-        }*/
+        }
     }
 }
