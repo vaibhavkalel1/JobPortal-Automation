@@ -102,7 +102,7 @@ pipeline {
         stage('Get URL and play with Application') {
             steps {
                 script {
-                    bat "minikube service social-app-service1"
+                    bat "minikube service jobportal-app-service1"
                 }
             }
         }
