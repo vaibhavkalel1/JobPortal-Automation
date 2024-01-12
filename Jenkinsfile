@@ -91,14 +91,14 @@ pipeline {
                     bat "kubectl expose deployment jobportal-app-deployment1 --type=NodePort --port=8000"
                 }
             }
-        }*/
+        }
         stage('Get URL') {
             steps {
                 script {
                     bat "minikube service jobportal-app-service1 --url"
                 }
             }
-        }
+        }*/
         stage('Get URL and play with Application') {
             steps {
                 script {
