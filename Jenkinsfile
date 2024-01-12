@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/vaibhavkalel1/JobPortal-Automation.git'
             }
         }
-        stage('Build Docker Image') {
+        /*stage('Build Docker Image') {
             steps {
                 script {
                     bat "docker build -t vaibhavkalel/jobportalautomation ."
@@ -92,7 +92,7 @@ pipeline {
                 }
             }
         }
-        /*stage('Get URL') {
+        stage('Get URL') {
             steps {
                 script {
                     bat "minikube service jobportal-app-service1 --url"
